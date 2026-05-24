@@ -1,95 +1,289 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta name="description" content="Rauschwerk – Dark Techno, Hard Techno und Schranz. Hypnotischer Druck, dunkle Energie und industrieller Sound." />
-<link rel="icon" href="avatar.png" />
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Rauschwerk</title>
-<style>
-body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 20% 30%, rgba(59,130,246,.08), transparent 30%),radial-gradient(circle at 80% 70%, rgba(255,255,255,.04), transparent 25%);animation:drift 14s ease-in-out infinite alternate;pointer-events:none;z-index:0}
-@keyframes drift{from{transform:translateY(0)}to{transform:translateY(-20px)}}
-body{margin:0;font-family:Arial,sans-serif;background:#05080d;color:#fff;overflow-x:hidden}
-.hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.88)),url('banner.png') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
-.hero-content{max-width:1000px}
-h1{font-size:clamp(3rem,8vw,7rem);letter-spacing:.22em;margin:0}
-.sub{color:#cbd5e1;letter-spacing:.3em;font-size:.9rem}
-.tag{color:#94a3b8;font-size:1.2rem;margin-top:20px}
-.btn{display:inline-block;margin-top:35px;padding:16px 30px;border:1px solid #60a5fa;color:white;text-decoration:none;border-radius:18px;transition:.3s}
-.btn:hover{background:rgba(96,165,250,.15)}
-.section{padding:90px 20px;max-width:1200px;margin:auto}
-.about{display:grid;grid-template-columns:1fr 1.4fr;gap:50px;align-items:center}
-.avatar{width:100%;max-width:420px;border-radius:50%;display:block;margin:auto;box-shadow:0 0 50px rgba(59,130,246,.15)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{padding:28px;background:#0f172a;border:1px solid #1e293b;border-radius:24px;text-align:center;text-decoration:none;color:#fff;font-size:1.2rem;transition:.3s}
-.card:hover{transform:translateY(-4px);border-color:#60a5fa}
-.release{text-align:center}
-.cover{width:min(360px,80vw);border-radius:28px;box-shadow:0 0 50px rgba(0,0,0,.4)}
-footer{text-align:center;padding:70px 20px;border-top:1px solid #111827;color:#cbd5e1}
-@media(max-width:850px){.about{grid-template-columns:1fr}h1{letter-spacing:.12em}.sub{letter-spacing:.15em}}
-</style>
-</head>
-<body>
-<section class="hero">
-<div class="hero-content">
-<div class="sub">DARK TECHNO | HARD TECHNO | SCHRANZ</div>
-<h1>RAUSCHWERK</h1>
-<div class="tag">Hypnotischer Druck. Dunkle Energie. Industrieller Sound.</div>
-<a class="btn" href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK?si=xE5_2KrLT_Cf6xBmw7rY5Q">JETZT HÖREN</a>
-</div>
-</section>
-<section class="section about">
-<img src="avatar.png" alt="Rauschwerk" class="avatar" />
-<div>
-<h2>ÜBER RAUSCHWERK</h2>
-<p>Rauschwerk steht für kompromisslosen Techno zwischen dunkler Atmosphäre, hypnotischem Druck und roher Energie. Der Sound bewegt sich zwischen Dark Techno, Hard Techno und Schranz — geprägt von treibenden Rhythmen, industriellen Texturen und intensiver Club-Energie. Musik für dunkle Räume, lange Nächte und Momente kontrollierter Eskalation.</p>
-</div>
-</section>
-<section class="section">
-<h2 style="text-align:center">MUSIK</h2>
-<div class="grid">
-<a class="card" href="https://amuse.cello.so/COK3xOQt0bA">Musik veröffentlichen mit Amuse</a>
-<a class="card" href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK?si=xE5_2KrLT_Cf6xBmw7rY5Q">Spotify</a>
-<a class="card" href="https://soundcloud.com/rauschwerkmusik">SoundCloud</a>
-<a class="card" href="https://music.youtube.com/@rauschwerkmusik?si=Ohf6rfSL-fhK8dg_">YouTube Music</a>
-<a class="card" href="https://www.tiktok.com/@rauschwerk">TikTok</a>
-</div>
-</section>
-<section class="section release">
-<h2>AKTUELLER RELEASE</h2>
-<img src="datenrausch.png" alt="Datenrausch" class="cover" />
-<h3>DATENRAUSCH</h3>
-<a class="btn" href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK?si=xE5_2KrLT_Cf6xBmw7rY5Q">JETZT STREAMEN</a>
-</section>
-<footer>
-<div><a href="https://amuse.cello.so/COK3xOQt0bA" style="color:#93c5fd;text-decoration:none;">Musik veröffentlichen mit Amuse</a></div>
-<div style="margin-top:15px">rauschwerkmusik@gmail.com</div>
-<div style="margin-top:25px;color:#64748b">© RAUSCHWERK</div>
-</footer>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script>
-const overlay = document.createElement('div');
-overlay.style.position='fixed';
-overlay.style.inset='0';
-overlay.style.background='rgba(0,0,0,0.9)';
-overlay.style.display='none';
-overlay.style.alignItems='center';
-overlay.style.justifyContent='center';
-overlay.style.zIndex='9999';
-overlay.innerHTML = `
-<div style="width:360px;height:640px;max-width:90vw;max-height:80vh;overflow:hidden;border-radius:24px;box-shadow:0 0 50px rgba(59,130,246,.3);position:relative;">
-  <img id="canvasImg" src="datenrausch.png" style="width:100%;height:100%;object-fit:cover;animation:zoomLoop 8s linear infinite;">
-</div>`;
-document.body.appendChild(overlay);
-const btn = document.createElement('button');
-btn.textContent='SPOTIFY CANVAS PREVIEW';
-btn.style.position='fixed';btn.style.bottom='20px';btn.style.right='20px';btn.style.zIndex='999';btn.style.padding='12px 18px';btn.style.background='#0f172a';btn.style.color='white';btn.style.border='1px solid #60a5fa';btn.style.borderRadius='16px';btn.style.cursor='pointer';
-document.body.appendChild(btn);
-btn.onclick=()=>overlay.style.display='flex';
-overlay.onclick=()=>overlay.style.display='none';
-const style=document.createElement('style');
-style.innerHTML='@keyframes zoomLoop{0%{transform:scale(1)}50%{transform:scale(1.06)}100%{transform:scale(1)}}';
-document.head.appendChild(style);
-</script>
+  <title>Rauschwerk</title>
+
+  <meta name="description" content="Rauschwerk – Dark Techno, Industrial Techno und Hard Techno. Hypnotischer Druck. Dunkle Energie. Industrieller Sound.">
+
+  <meta property="og:title" content="RAUSCHWERK">
+  <meta property="og:description" content="Dark Techno | Industrial Techno | Hard Techno">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rauschwerkmusik-creator.github.io/rauschwerkmusik">
+  <meta property="og:image" content="https://rauschwerkmusik-creator.github.io/rauschwerkmusik/banner.png">
+  <meta property="og:image:secure_url" content="https://rauschwerkmusik-creator.github.io/rauschwerkmusik/banner.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RAUSCHWERK">
+  <meta name="twitter:description" content="Dark Techno | Industrial Techno | Hard Techno">
+  <meta name="twitter:image" content="https://rauschwerkmusik-creator.github.io/rauschwerkmusik/banner.png">
+
+  <meta name="theme-color" content="#05080d">
+
+  <link rel="icon" href="avatar.png">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #05080d;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(59,130,246,.08), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,.04), transparent 25%);
+      animation: drift 14s ease-in-out infinite alternate;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes drift {
+      from { transform: translateY(0); }
+      to { transform: translateY(-20px); }
+    }
+
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.88)),
+        url('banner.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 7rem);
+      letter-spacing: .22em;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      font-size: 2rem;
+      letter-spacing: .15em;
+    }
+
+    p {
+      line-height: 1.8;
+      color: #cbd5e1;
+    }
+
+    .sub {
+      color: #cbd5e1;
+      letter-spacing: .3em;
+      font-size: .9rem;
+    }
+
+    .tag {
+      color: #94a3b8;
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 16px 30px;
+      border: 1px solid #60a5fa;
+      color: white;
+      text-decoration: none;
+      border-radius: 18px;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: rgba(96,165,250,.15);
+      box-shadow: 0 0 30px rgba(59,130,246,.25);
+    }
+
+    .section {
+      padding: 90px 20px;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 50%;
+      display: block;
+      margin: auto;
+      box-shadow: 0 0 50px rgba(59,130,246,.15);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 28px;
+      background: rgba(15,23,42,.85);
+      border: 1px solid #1e293b;
+      border-radius: 24px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      transition: .3s;
+      backdrop-filter: blur(8px);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #60a5fa;
+      box-shadow: 0 0 30px rgba(59,130,246,.15);
+    }
+
+    .release {
+      text-align: center;
+    }
+
+    .cover {
+      width: min(360px, 80vw);
+      border-radius: 28px;
+      box-shadow: 0 0 50px rgba(0,0,0,.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 70px 20px;
+      border-top: 1px solid #111827;
+      color: #cbd5e1;
+    }
+
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media(max-width: 850px) {
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        letter-spacing: .12em;
+      }
+
+      .sub {
+        letter-spacing: .15em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="sub">DARK TECHNO | INDUSTRIAL TECHNO | HARD TECHNO</div>
+      <h1>RAUSCHWERK</h1>
+      <div class="tag">Hypnotischer Druck. Dunkle Energie. Industrieller Sound.</div>
+
+      <a class="btn"
+         href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK?si=xE5_2KrLT_Cf6xBmw7rY5Q">
+         JETZT HÖREN
+      </a>
+    </div>
+  </section>
+
+  <section class="section about">
+    <img src="avatar.png" alt="Rauschwerk" class="avatar">
+
+    <div>
+      <h2>ÜBER RAUSCHWERK</h2>
+      <p>
+        Rauschwerk steht für kompromisslosen Techno zwischen dunkler Atmosphäre,
+        hypnotischem Druck und roher Energie. Der Sound bewegt sich zwischen
+        Dark Techno, Hard Techno und Schranz — geprägt von treibenden Rhythmen,
+        industriellen Texturen und intensiver Club-Energie.
+
+        Musik für dunkle Räume, lange Nächte und Momente kontrollierter Eskalation.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 style="text-align:center;">MUSIK</h2>
+
+    <div class="grid">
+      <a class="card" href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK?si=xE5_2KrLT_Cf6xBmw7rY5Q">Spotify</a>
+      <a class="card" href="https://soundcloud.com/rauschwerkmusik">SoundCloud</a>
+      <a class="card" href="https://music.youtube.com/@rauschwerkmusik?si=Ohf6rfSL-fhK8dg_">YouTube Music</a>
+      <a class="card" href="https://www.tiktok.com/@rauschwerk">TikTok</a>
+    </div>
+  </section>
+
+  <section class="section release">
+    <h2>AKTUELLER RELEASE</h2>
+
+    <img src="datenrausch.png" alt="Datenrausch" class="cover">
+
+    <h3>DATENRAUSCH</h3>
+
+    <a class="btn"
+       href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK?si=xE5_2KrLT_Cf6xBmw7rY5Q">
+       JETZT STREAMEN
+    </a>
+  </section>
+
+  <footer>
+    <div>
+      <a href="https://amuse.cello.so/COK3xOQt0bA">
+        Musik veröffentlichen mit Amuse
+      </a>
+    </div>
+
+    <div style="margin-top:15px;">
+      rauschwerkmusik@gmail.com
+    </div>
+
+    <div style="margin-top:25px; color:#64748b;">
+      © RAUSCHWERK
+    </div>
+  </footer>
+
 </body>
 </html>
