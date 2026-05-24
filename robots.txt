@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rauschwerkmusik.netlify.app/sitemap.xml
