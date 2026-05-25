@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>RAUSCHWERK</title>
 
-<meta name="description" content="Rauschwerk – Dark Techno, Hard Techno und Industrial Techno. Hypnotischer Druck, dunkle Energie und industrieller Sound." />
+<meta name="description" content="Dark Techno, Hard Techno und Industrial Techno von Rauschwerk. Hypnotischer Druck. Dunkle Energie. Industrieller Sound.">
 
-<meta property="og:title" content="RAUSCHWERK – Dark / Industrial / Hard Techno" />
-<meta property="og:description" content="Dark Techno, Industrial Techno und Hard Techno aus Deutschland. Hypnotische Energie, industrielle Klangwelten und kompromissloser Druck." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://rauschwerkmusik.de/" />
-<meta property="og:image" content="https://rauschwerkmusik.de/banner.png" />
-<meta property="og:image:secure_url" content="https://rauschwerkmusik.de/banner.png" />
-<meta property="og:image:type" content="image/png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+<meta property="og:title" content="RAUSCHWERK – Dark Techno">
+<meta property="og:description" content="Hypnotischer Druck. Dunkle Energie. Industrieller Sound.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rauschwerkmusik.de/">
+<meta property="og:image" content="https://rauschwerkmusik.de/banner.png">
 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="RAUSCHWERK" />
-<meta name="twitter:image" content="https://rauschwerkmusik.de/banner.png" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#05080d">
 
-<meta name="theme-color" content="#05080d" />
-
-<link rel="icon" href="avatar.png" />
+<link rel="icon" href="avatar.png">
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #05080d;
+  color: #fff;
+  overflow-x: hidden;
+}
+
 body::before {
   content: '';
   position: fixed;
@@ -40,31 +49,22 @@ body::before {
 }
 
 @keyframes drift {
-  from { transform: translateY(0); }
-  to { transform: translateY(-20px); }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20px);
+  }
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #05080d;
-  color: #fff;
-  overflow-x: hidden;
-}
-
-.hero,
-.section,
+section,
 footer {
   position: relative;
   z-index: 1;
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: 100svh;
   background:
     linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.88)),
     url('banner.png') center/cover no-repeat;
@@ -79,48 +79,74 @@ footer {
   max-width: 1000px;
 }
 
-h1 {
-  font-size: clamp(3rem, 8vw, 7rem);
-  letter-spacing: .22em;
-  margin: 0;
-}
-
 .sub {
   color: #cbd5e1;
-  letter-spacing: .3em;
+  letter-spacing: .2em;
   font-size: .9rem;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 7rem);
+  letter-spacing: .18em;
+  margin: 0;
 }
 
 .tag {
   color: #94a3b8;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 20px;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 35px;
   padding: 16px 30px;
   border: 1px solid #60a5fa;
   color: white;
   text-decoration: none;
   border-radius: 18px;
   transition: .3s;
+  background: rgba(0,0,0,.2);
+  margin-top: 30px;
 }
 
 .btn:hover {
+  transform: translateY(-4px);
   background: rgba(96,165,250,.15);
 }
 
+.hero-links {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.social-link {
+  display: inline-block;
+  padding: 14px 22px;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  color: white;
+  text-decoration: none;
+  background: #0f172a;
+  transition: .3s;
+}
+
+.social-link:hover {
+  transform: translateY(-4px);
+  border-color: #60a5fa;
+}
+
 .section {
-  padding: 90px 20px;
+  padding: 80px 20px;
   max-width: 1200px;
   margin: auto;
 }
 
 .about {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 50px;
   align-items: center;
 }
@@ -134,29 +160,6 @@ h1 {
   box-shadow: 0 0 50px rgba(59,130,246,.15);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 20px;
-}
-
-.card {
-  padding: 28px;
-  background: #0f172a;
-  border: 1px solid #1e293b;
-  border-radius: 24px;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.2rem;
-  transition: .3s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  border-color: #60a5fa;
-}
-
 .release {
   text-align: center;
 }
@@ -167,53 +170,28 @@ h1 {
   box-shadow: 0 0 50px rgba(0,0,0,.4);
 }
 
-.amuse-cta {
-  margin: 0 auto 40px;
-  max-width: 800px;
-  padding: 30px;
-  background: linear-gradient(135deg,#111,#1c1c1c);
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: 24px;
-  text-align: center;
-  box-shadow: 0 0 25px rgba(0,0,0,.5);
-}
-
-.amuse-cta h3 {
-  margin: 0 0 10px;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.amuse-cta p {
-  color: #cbd5e1;
-  margin: 0 0 20px;
-  font-size: 1rem;
-}
-
-.amuse-button {
-  display: inline-block;
-  padding: 14px 28px;
-  background: #7c3aed;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 12px;
-  transition: .3s;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.amuse-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(124,58,237,.5);
-}
-
 footer {
   text-align: center;
-  padding: 70px 20px;
+  padding: 60px 20px;
   border-top: 1px solid #111827;
   color: #cbd5e1;
+}
+
+.mobile-cta {
+  display: none;
+}
+
+.legal-mini {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-size: .85rem;
+  color: #94a3b8;
+}
+
+.legal-mini h3 {
+  color: white;
+  margin-bottom: 10px;
 }
 
 @media(max-width:850px) {
@@ -222,11 +200,44 @@ footer {
   }
 
   h1 {
-    letter-spacing: .12em;
+    letter-spacing: .1em;
   }
 
   .sub {
-    letter-spacing: .15em;
+    letter-spacing: .08em;
+  }
+
+  .btn,
+  .social-link {
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-cta {
+    display: block;
+    position: fixed;
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    z-index: 999;
+  }
+
+  .mobile-cta a {
+    display: block;
+    text-align: center;
+    padding: 18px;
+    background: #60a5fa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 18px;
+    font-weight: bold;
+    box-shadow: 0 0 25px rgba(96,165,250,.4);
+  }
+
+  body {
+    padding-bottom: 90px;
   }
 }
 </style>
@@ -237,46 +248,36 @@ footer {
 <section class="hero">
   <div class="hero-content">
     <div class="sub">DARK TECHNO | HARD TECHNO | INDUSTRIAL TECHNO</div>
+
     <h1>RAUSCHWERK</h1>
-    <div class="tag">Hypnotischer Druck. Dunkle Energie. Industrieller Sound.</div>
+
+    <div class="tag">
+      Hypnotischer Druck. Dunkle Energie. Industrieller Sound.
+    </div>
+
     <a class="btn" href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK?si=xE5_2KrLT_Cf6xBmw7rY5Q">
-      JETZT HÖREN
+      🎧 JETZT STREAMEN
     </a>
+
+    <div class="hero-links">
+      <a class="social-link" href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK?si=xE5_2KrLT_Cf6xBmw7rY5Q">Spotify</a>
+      <a class="social-link" href="https://music.youtube.com/@rauschwerkmusik?si=Ohf6rfSL-fhK8dg_">YouTube</a>
+      <a class="social-link" href="https://www.tiktok.com/@rauschwerk">TikTok</a>
+      <a class="social-link" href="https://music.apple.com">Apple Music</a>
+      <a class="social-link" href="https://audiomack.com/rauschwerkmusik">Audiomack</a>
+    </div>
   </div>
 </section>
 
 <section class="section about">
-  <img src="avatar.png" alt="Rauschwerk" class="avatar" />
+  <img src="avatar.png" alt="Rauschwerk" class="avatar" loading="lazy">
 
   <div>
     <h2>ÜBER RAUSCHWERK</h2>
     <p>
-      Rauschwerk steht für kompromisslosen Techno zwischen dunkler Atmosphäre,
-      hypnotischem Druck und roher Energie. Der Sound bewegt sich zwischen
-      Dark Techno, Hard Techno und Industrial Techno — geprägt von treibenden
-      Rhythmen, industriellen Texturen und intensiver Club-Energie.
-      Musik für dunkle Räume, lange Nächte und Momente kontrollierter Eskalation.
+      Dark Techno. Industrial Energie. Hypnotischer Druck.
+      Musik für dunkle Räume, lange Nächte und kompromisslose Club-Energie.
     </p>
-  </div>
-</section>
-
-<section class="section">
-  <h2 style="text-align:center">MUSIK</h2>
-
-  <div class="amuse-cta">
-    <h3>Distributor gesucht?</h3>
-    <p>Bring deine Tracks auf Spotify, Apple Music & mehr.</p>
-    <a href="https://amuse.cello.so/COK3xOQt0bA" target="_blank" class="amuse-button">
-      MIT AMUSE STARTEN
-    </a>
-  </div>
-
-  <div class="grid">
-    <a class="card" href="https://amuse.cello.so/COK3xOQt0bA">Musik veröffentlichen mit Amuse</a>
-    <a class="card" href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK?si=xE5_2KrLT_Cf6xBmw7rY5Q">Spotify</a>
-    <a class="card" href="https://soundcloud.com/rauschwerkmusik">SoundCloud</a>
-    <a class="card" href="https://music.youtube.com/@rauschwerkmusik?si=Ohf6rfSL-fhK8dg_">YouTube Music</a>
-    <a class="card" href="https://www.tiktok.com/@rauschwerk">TikTok</a>
   </div>
 </section>
 
@@ -287,7 +288,8 @@ footer {
     src="https://rauschwerkmusik-creator.github.io/rauschwerkmusik/datenrausch.PNG"
     alt="Datenrausch"
     class="cover"
-  />
+    loading="lazy"
+  >
 
   <h3>DATENRAUSCH</h3>
 
@@ -295,11 +297,49 @@ footer {
     JETZT STREAMEN
   </a>
 </section>
+<section id="impressum" class="legal-mini">
+  <h3>Impressum</h3>
+  <p>
+    Max Mustermann<br>
+    Musterstraße 1<br>
+    76133 Karlsruhe<br>
+    Deutschland<br>
+    E-Mail: rauschwerkmusik@gmail.com
+  </p>
+</section>
+
+<section id="datenschutz" class="legal-mini">
+  <h3>Datenschutz</h3>
+  <p>
+    Diese Website enthält externe Links zu Spotify, TikTok, YouTube,
+    Apple Music und Audiomack. Beim Anklicken externer Links können
+    Daten an die jeweiligen Anbieter übertragen werden.
+  </p>
+</section>
 
 <footer>
   <div>
-    <a href="https://amuse.cello.so/COK3xOQt0bA" style="color:#93c5fd;text-decoration:none;">
+    <a
+      href="https://amuse.cello.so/COK3xOQt0bA"
+      style="color:#93c5fd;text-decoration:none;"
+    >
       Musik veröffentlichen mit Amuse
+    </a>
+  </div>
+
+  <div style="margin-top:15px;font-size:.9rem;">
+    <a
+      href="#impressum"
+      style="color:#94a3b8;text-decoration:none;"
+    >
+      Impressum
+    </a>
+    |
+    <a
+      href="#datenschutz"
+      style="color:#94a3b8;text-decoration:none;"
+    >
+      Datenschutz
     </a>
   </div>
 
@@ -311,6 +351,12 @@ footer {
     © RAUSCHWERK
   </div>
 </footer>
+
+<div class="mobile-cta">
+  <a href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK?si=xE5_2KrLT_Cf6xBmw7rY5Q">
+    🎧 JETZT STREAMEN
+  </a>
+</div>
 
 </body>
 </html>
