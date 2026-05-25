@@ -297,25 +297,42 @@ footer {
     JETZT STREAMEN
   </a>
 </section>
-<section id="impressum" class="legal-mini">
-  <h3>Impressum</h3>
-  <p>
-    Max Mustermann<br>
-    Musterstraße 1<br>
-    76133 Karlsruhe<br>
-    Deutschland<br>
-    E-Mail: rauschwerkmusik@gmail.com
-  </p>
-</section>
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  background: rgba(0,0,0,.85);
+  backdrop-filter: blur(6px);
+  padding: 20px;
+}
 
-<section id="datenschutz" class="legal-mini">
-  <h3>Datenschutz</h3>
-  <p>
-    Diese Website enthält externe Links zu Spotify, TikTok, YouTube,
-    Apple Music und Audiomack. Beim Anklicken externer Links können
-    Daten an die jeweiligen Anbieter übertragen werden.
-  </p>
-</section>
+.modal-content {
+  max-width: 700px;
+  margin: 8vh auto;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 24px;
+  padding: 30px;
+  color: #cbd5e1;
+  position: relative;
+}
+
+.modal-content h3 {
+  color: white;
+  margin-top: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #94a3b8;
+}
+</style>
 
 <footer>
   <div>
@@ -328,17 +345,11 @@ footer {
   </div>
 
   <div style="margin-top:15px;font-size:.9rem;">
-    <a
-      href="#impressum"
-      style="color:#94a3b8;text-decoration:none;"
-    >
+    <a href="#" onclick="openModal('impressumModal')" style="color:#94a3b8;text-decoration:none;">
       Impressum
     </a>
     |
-    <a
-      href="#datenschutz"
-      style="color:#94a3b8;text-decoration:none;"
-    >
+    <a href="#" onclick="openModal('datenschutzModal')" style="color:#94a3b8;text-decoration:none;">
       Datenschutz
     </a>
   </div>
@@ -352,11 +363,55 @@ footer {
   </div>
 </footer>
 
+<div id="impressumModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('impressumModal')">&times;</span>
+    <h3>Impressum</h3>
+    <p>
+      Max Mustermann<br>
+      Musterstraße 1<br>
+      76133 Karlsruhe<br>
+      Deutschland<br>
+      E-Mail: rauschwerkmusik@gmail.com
+    </p>
+  </div>
+</div>
+
+<div id="datenschutzModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('datenschutzModal')">&times;</span>
+    <h3>Datenschutz</h3>
+    <p>
+      Diese Website enthält externe Links zu Spotify, TikTok, YouTube,
+      Apple Music und Audiomack. Beim Anklicken externer Links können
+      Daten an die jeweiligen Anbieter übertragen werden.
+    </p>
+  </div>
+</div>
+
 <div class="mobile-cta">
   <a href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK?si=xE5_2KrLT_Cf6xBmw7rY5Q">
     🎧 JETZT STREAMEN
   </a>
 </div>
+
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(event) {
+  document.querySelectorAll('.modal').forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+}
+</script>
 
 </body>
 </html>
