@@ -6,15 +6,7 @@
 
 <title>RAUSCHWERK</title>
 
-<meta name="description" content="Dark Techno, Hard Techno und Industrial Techno von Rauschwerk. Hypnotischer Druck. Dunkle Energie. Industrieller Sound.">
-
-<meta property="og:title" content="RAUSCHWERK – Dark Techno">
-<meta property="og:description" content="Hypnotischer Druck. Dunkle Energie. Industrieller Sound.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://rauschwerkmusik.de/">
-<meta property="og:image" content="https://rauschwerkmusik.de/banner.png">
-
-<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Dark Techno, Hard Techno und Industrial Techno von Rauschwerk.">
 <meta name="theme-color" content="#05080d">
 
 <link rel="icon" href="avatar.png">
@@ -32,7 +24,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #05080d;
-  color: #fff;
+  color: white;
   overflow-x: hidden;
 }
 
@@ -49,12 +41,8 @@ body::before {
 }
 
 @keyframes drift {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-20px);
-  }
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
 }
 
 @keyframes pulseGlow {
@@ -155,12 +143,6 @@ h1 {
   font-size: 1.4rem;
 }
 
-.social-link svg {
-  width: 26px;
-  height: 26px;
-  fill: currentColor;
-}
-
 .social-link:hover {
   transform: translateY(-4px);
   border-color: #60a5fa;
@@ -219,6 +201,23 @@ h1 {
   box-shadow:
     0 0 20px rgba(96,165,250,.35),
     0 0 45px rgba(96,165,250,.15);
+}
+
+.project-card {
+  background: rgba(15,23,42,.85);
+  border: 1px solid #1e293b;
+  border-radius: 28px;
+  padding: 35px;
+  backdrop-filter: blur(8px);
+  transition: .35s ease;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 20px rgba(168,85,247,.25),
+    0 0 50px rgba(168,85,247,.12);
 }footer {
   text-align: center;
   padding: 60px 20px;
@@ -248,11 +247,6 @@ h1 {
   box-shadow: 0 0 20px rgba(96,165,250,.15);
 }
 
-.modal-content h3 {
-  color: white;
-  margin-top: 0;
-}
-
 .close-btn {
   position: absolute;
   top: 15px;
@@ -277,11 +271,6 @@ h1 {
 
   .sub {
     letter-spacing: .08em;
-  }
-
-  .btn,
-  .social-link {
-    min-height: 56px;
   }
 
   .mobile-cta {
@@ -326,38 +315,27 @@ h1 {
       Hypnotischer Druck. Dunkle Energie. Industrieller Sound.
     </div>
 
-    <a class="btn" href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK?si=xE5_2KrLT_Cf6xBmw7rY5Q">
+    <a class="btn" href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK">
       🎧 JETZT STREAMEN
     </a>
 
     <div class="hero-links">
-
-      <a class="social-link" href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK?si=xE5_2KrLT_Cf6xBmw7rY5Q" title="Spotify">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.5 17.3c-.2.3-.6.4-.9.2-2.5-1.5-5.7-1.8-9.6-.9-.3.1-.7-.1-.8-.5-.1-.3.1-.7.5-.8 4.2-1 7.8-.7 10.6 1 .3.2.4.6.2 1zm1.3-2.8c-.3.4-.8.5-1.2.3-2.8-1.7-7.1-2.2-10.4-1.1-.4.1-.9-.1-1-.6-.1-.4.1-.9.6-1 3.8-1.2 8.5-.7 11.7 1.3.4.2.5.8.3 1.1zm.1-3c-3.4-2-9-2.2-12.3-1.1-.5.2-1-.1-1.2-.6-.2-.5.1-1 .6-1.2 3.8-1.2 10-.9 13.9 1.4.5.3.6.9.3 1.5-.3.4-.9.5-1.3 0z"/>
-        </svg>
-      </a>
-
-      <a class="social-link" href="https://music.youtube.com/@rauschwerkmusik?si=Ohf6rfSL-fhK8dg_" title="YouTube">
-        <svg viewBox="0 0 24 24">
-          <path d="M23.5 6.2s-.2-1.7-.9-2.4c-.9-.9-1.9-.9-2.4-1C16.8 2.5 12 2.5 12 2.5s-4.8 0-8.2.3c-.5.1-1.5.1-2.4 1C.7 4.5.5 6.2.5 6.2S.2 8.1.2 10v1.9c0 1.9.3 3.8.3 3.8s.2 1.7.9 2.4c.9.9 2.1.8 2.7 1 1.9.2 7.9.3 7.9.3s4.8 0 8.2-.3c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.4.9-2.4s.3-1.9.3-3.8V10c0-1.9-.3-3.8-.3-3.8zM9.8 14.6V8.8l5.6 2.9-5.6 2.9z"/>
-        </svg>
-      </a>
-
-      <a class="social-link" href="https://www.tiktok.com/@rauschwerk" title="TikTok">🎵</a>
-      <a class="social-link" href="https://music.apple.com" title="Apple Music"></a>
-      <a class="social-link" href="https://audiomack.com/rauschwerkmusik" title="Audiomack">🔥</a>
-
+      <a class="social-link" href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK">🎧</a>
+      <a class="social-link" href="https://music.youtube.com/@rauschwerkmusik">▶</a>
+      <a class="social-link" href="https://www.tiktok.com/@rauschwerk">🎵</a>
+      <a class="social-link" href="https://music.apple.com"></a>
+      <a class="social-link" href="https://audiomack.com/rauschwerkmusik">🔥</a>
     </div>
   </div>
 </section>
 
 <section class="section about">
-  <img src="avatar.png" alt="Rauschwerk" class="avatar" loading="lazy">
+  <img src="avatar.png" alt="Rauschwerk" class="avatar">
 
   <div>
     <h2>ÜBER RAUSCHWERK</h2>
-    <p>
+
+    <p style="color:#94a3b8;line-height:1.8;">
       Dark Techno. Industrial Energie. Hypnotischer Druck.
       Musik für dunkle Räume, lange Nächte und kompromisslose Club-Energie.
     </p>
@@ -371,14 +349,32 @@ h1 {
     src="https://rauschwerkmusik-creator.github.io/rauschwerkmusik/datenrausch.PNG"
     alt="Datenrausch"
     class="cover"
-    loading="lazy"
   >
 
   <h3>DATENRAUSCH</h3>
 
-  <a class="btn" href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK?si=xE5_2KrLT_Cf6xBmw7rY5Q">
+  <a class="btn" href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK">
     JETZT STREAMEN
   </a>
+</section>
+
+<section class="section">
+  <div class="project-card">
+    <h2>🌙 NACHTSTROM</h2>
+
+    <p style="color:#94a3b8;line-height:1.8;font-size:1.05rem;">
+      <strong>Hypnotic Minimal Techno.</strong><br>
+      Dunkel. Reduziert. Endlos.
+      <br><br>
+      Ein Nebenprojekt von <strong>RAUSCHWERK</strong> mit Fokus auf
+      minimalistischen, hypnotischen Klangwelten.
+    </p>
+
+    <div class="hero-links">
+      <a class="social-link" href="https://open.spotify.com/intl-de/artist/7eybhgiptI65ENH8ncl5vb">🎧</a>
+      <a class="social-link" href="https://soundcloud.com/nachtstrommusik">☁</a>
+    </div>
+  </div>
 </section>
 
 <footer>
@@ -408,22 +404,32 @@ h1 {
   <div class="modal-content">
     <span class="close-btn" onclick="closeModal('datenschutzModal')">&times;</span>
     <h3>Datenschutz</h3>
-    <p>Diese Website enthält externe Links zu Streaming-Plattformen. Beim Anklicken können Daten an die jeweiligen Anbieter übertragen werden.</p>
+    <p>
+      Diese Website enthält externe Links zu Streaming-Plattformen.
+    </p>
   </div>
 </div>
 
 <div class="mobile-cta">
-  <a href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK?si=xE5_2KrLT_Cf6xBmw7rY5Q">
+  <a href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK">
     🎧 JETZT STREAMEN
   </a>
 </div>
 
 <script>
-function openModal(id){document.getElementById(id).style.display="block";}
-function closeModal(id){document.getElementById(id).style.display="none";}
-window.onclick=function(event){
-  document.querySelectorAll('.modal').forEach(modal=>{
-    if(event.target===modal){modal.style.display="none";}
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(event) {
+  document.querySelectorAll('.modal').forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
   });
 }
 </script>
