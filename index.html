@@ -181,7 +181,44 @@ h1 {
 .release {
   text-align: center;
 }
+.rausch-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:40px;
+  margin-top:50px;
+}
 
+.rausch-item{
+  text-align:center;
+}
+
+.rausch-item .cover{
+  width:100%;
+  max-width:420px;
+}
+
+.rausch-item h3{
+  margin-top:20px;
+}
+
+.rausch-item p{
+  color:#94a3b8;
+  line-height:1.7;
+}
+
+.series-text{
+  margin-top:40px;
+  color:#cbd5e1;
+  font-size:1.05rem;
+}
+
+@media(max-width:850px){
+
+  .rausch-grid{
+    grid-template-columns:1fr;
+  }
+
+}
 .cover {
   width: min(360px,80vw);
   border-radius: 28px;
@@ -366,19 +403,59 @@ h1 {
 </section>
 
 <section class="section release">
-  <h2>AKTUELLER RELEASE</h2>
 
-  <img
-    src="https://rauschwerkmusik-creator.github.io/rauschwerkmusik/datenrausch.PNG"
-    alt="Datenrausch"
-    class="cover"
-  >
+<h2>THE RAUSCH SERIES</h2>
 
-  <h3>DATENRAUSCH</h3>
+<p style="color:#94a3b8;">
+Zwei neue Veröffentlichungen.
+Zwei Seiten des Rauschs.
+</p>
 
-  <a class="btn" href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK">
-    JETZT STREAMEN
-  </a>
+<div class="rausch-grid">
+
+<div class="rausch-item">
+
+<img src="schwarzrausch.png"
+alt="Schwarzrausch"
+class="cover">
+
+<h3>⚫ SCHWARZRAUSCH</h3>
+
+<p>
+Dunkel.<br>
+Massiv.<br>
+Kompromisslos.
+</p>
+
+</div>
+
+<div class="rausch-item">
+
+<img src="nachtrausch.png"
+alt="Nachtrausch"
+class="cover">
+
+<h3>🌙 NACHTRAUSCH</h3>
+
+<p>
+Hypnotisch.<br>
+Tief.<br>
+Endlos.
+</p>
+
+</div>
+
+</div>
+
+<p class="series-text">
+Industrial Darkness trifft auf hypnotische Nachtenergie.
+</p>
+
+<a class="btn"
+href="https://open.spotify.com/intl-de/artist/2xgmwJ3EYSVsPFthOfCAIK">
+🎧 JETZT STREAMEN
+</a>
+
 </section>
 
 <section class="section">
